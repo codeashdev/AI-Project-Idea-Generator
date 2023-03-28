@@ -1,0 +1,1 @@
+# AI Project Idea Generator

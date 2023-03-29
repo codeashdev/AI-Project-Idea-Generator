@@ -1,4 +1,4 @@
-export const fetchResponse = async (prompt,setResponse,setLoading) => {
+export const fetchResponse = async (prompt,setResponses,setLoading) => {
     setLoading(true);
     const options = {
       method: 'POST',
@@ -20,9 +20,7 @@ export const fetchResponse = async (prompt,setResponse,setLoading) => {
         options
       );
       const json = await response.json();
-    // console.log(json)
-      setResponse(json.choices[0].message.content);
-      // console.log(responses)
+      setResponses(json.choices[0].message.content);
       setLoading(false);
     } catch (error) {
       console.error(error);

@@ -5,7 +5,12 @@ import { ProjectContext } from "../../context/projectContext";
 import loadingSVG from "../../assets/loading.svg"
 
 export const Modal = ({handleGenerate}) => {
-    const { responses, loading, platform, language } = useContext(ProjectContext);
+    const { responses, loading, platform, language, setResponses } = useContext(ProjectContext);
+
+    const handleThankYou = () => {
+        // Set responses to empty string when "Thank You!" button is clicked
+        setResponses("");
+    };
 
     return(
         <div className="m-5">
@@ -24,7 +29,7 @@ export const Modal = ({handleGenerate}) => {
                 <>
                 <p className="py-4">{responses}</p>
                 <div className="modal-action">
-                <label htmlFor="my-modal-6" className="btn hover:bg-[#0D1117]">Thank You!</label> 
+                <label htmlFor="my-modal-6" className="btn hover:bg-[#0D1117]" onClick={handleThankYou}>Thank You!</label> 
                 </div>
                 </>
             )} 

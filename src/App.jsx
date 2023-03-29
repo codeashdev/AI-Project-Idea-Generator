@@ -10,11 +10,10 @@ import { ProjectContext } from './context/projectContext'
 import { fetchResponse } from './fetchResponse/fetchRespone'
 
 const App = () => {
-  const { prompt, setResponse, setLoading, platform } = useContext(ProjectContext);
+  const { prompt, setResponses, setLoading, platform } = useContext(ProjectContext);
   const handleGenerate = () => {
    
-        fetchResponse(prompt,setResponse,setLoading)
-        setResponse("")
+        fetchResponse(prompt,setResponses,setLoading)
   }
  
   return (

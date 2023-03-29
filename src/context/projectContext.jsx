@@ -8,7 +8,7 @@ export const ProjectProvider = ({ children }) => {
   const [language, setLanguage] = useState("");
   const [platform, setPlatform] = useState("");
   const [field, setField] = useState("");
-  const [responses, setResponse] = useState("");
+  const [responses, setResponses] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleLanguageChange = (event) => {
@@ -36,7 +36,7 @@ export const ProjectProvider = ({ children }) => {
     handleFieldChange,
     generateKey,
     criteriaKey,
-    setResponse,
+    setResponses,
     responses,
     setLoading,
     loading,

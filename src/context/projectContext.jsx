@@ -25,7 +25,8 @@ export const ProjectProvider = ({ children }) => {
 
   const generateKey = "Generate one more project idea for a "; 
   const criteriaKey = " only 550 charecter give a name to the project";
- 
+  const prompt = generateKey+platform+", "+field+", using "+language+","+criteriaKey;
+  
   const contextValues = {
     language,
     handleLanguageChange,
@@ -38,7 +39,8 @@ export const ProjectProvider = ({ children }) => {
     setResponse,
     responses,
     setLoading,
-    loading
+    loading,
+    prompt,
   };
 
   return (

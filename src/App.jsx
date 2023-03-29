@@ -10,8 +10,7 @@ import { ProjectContext } from './context/projectContext'
 import { fetchResponse } from './fetchResponse/fetchRespone'
 
 const App = () => {
-  const { prompt, setResponse, setLoading } = useContext(ProjectContext);
-  
+  const { prompt, setResponse, setLoading, platform } = useContext(ProjectContext);
   const handleGenerate = () => {
    
         fetchResponse(prompt,setResponse,setLoading)
@@ -24,8 +23,9 @@ const App = () => {
       <Header />
      
       <div className='flex flex-row justify-center xs:flex-col'>
-      <SelectLanguage />
       <SelectPlatform />
+     {platform&& <SelectLanguage /> }
+     
       </div>
       <UserInput />
       <div className='flex items-center justify-center color-[#0D1117]'>

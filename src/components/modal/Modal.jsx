@@ -11,7 +11,7 @@ export const Modal = ({handleGenerate}) => {
         <div className="m-5">
             {/* The button to open modal */}
             {!platform||!language ? (   
-            <label className="btn  hover:bg-[#0D1117] text-red" >Please select a value for language and platform!</label>
+            <label className="btn  hover:bg-[#0D1117] text-red" >Please select a value for platform and language!</label>
             ) :
             (<label htmlFor="my-modal-6" className="btn hover:bg-[#0D1117]" onClick={handleGenerate}>Generate</label>
             )}

@@ -4,7 +4,7 @@ import { ProjectContext } from "../../context/projectContext";
 
 export const SelectLanguage = () => {
 
-  const { language, handleLanguageChange } = useContext(ProjectContext);
+  const { language, handleLanguageChange, platform } = useContext(ProjectContext);
  
   return (
     <div className="flex justify-center m-5">
@@ -13,6 +13,8 @@ export const SelectLanguage = () => {
         value={language}
         onChange={handleLanguageChange}
       >
+      {platform ==="Website"?(
+        <>
         <option value="" disabled defaultValue>
           Pick the language
         </option>
@@ -24,9 +26,15 @@ export const SelectLanguage = () => {
             <option value="VanillaJS">VanillaJS</option>
             <option value="Node.js">Node.js</option>
             <option value="Python">Python</option>
-        <option value="" disabled>Mobile:</option> 
+            </>
+            ):(
+              <>
+       <option value="" disabled>Mobile:</option> 
             <option value="React Native">React Native</option>
             <option value="Flutter">Flutter</option>
+            <option value="Swift">Swift</option>
+            <option value="Kotlin">Kotlin</option>
+            </> )}
       </select>
     </div>
   );

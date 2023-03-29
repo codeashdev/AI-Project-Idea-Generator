@@ -15,6 +15,7 @@ npm install
 Create a .env file and add your API key to it:
 
 ```bash
+VITE_OPENAI_API_URL='https://api.openai.com/v1/chat/completions'
 VITE_OPENAI_API_KEY='ADD_YOUR_KEY_HERE'
 ```
 

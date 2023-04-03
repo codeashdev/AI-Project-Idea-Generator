@@ -12,6 +12,11 @@ export const Modal = ({handleGenerate}) => {
         setResponses("");
     };
 
+    const handleCopy = () => {
+        navigator.clipboard.writeText(responses);
+      };
+    
+
     return(
         <div className="m-5">
             {/* The button to open modal */}
@@ -30,6 +35,9 @@ export const Modal = ({handleGenerate}) => {
                 <p className="py-4">{responses}</p>
                 <div className="modal-action">
                 <label htmlFor="my-modal-6" className="btn hover:bg-[#0D1117]" onClick={handleThankYou}>Thank You!</label> 
+                <button className="btn hover:bg-[#0D1117]" onClick={handleCopy}>
+                  Copy Response
+                </button>
                 </div>
                 </>
             )} 

@@ -20,6 +20,7 @@ export const fetchResponse = async (prompt,setResponses,setLoading) => {
         options
       );
       const json = await response.json();
+      console.log(json)
       setResponses(json.choices[0].message.content);
       setLoading(false);
     } catch (error) {

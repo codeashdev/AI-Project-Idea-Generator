@@ -7,7 +7,7 @@ import { ProjectContext } from "../../context/projectContext";
 
 import loadingSVG from "../../assets/loading.svg";
 
-export function Modal({ handleGenerate }) {
+export const Modal = ({ handleGenerate }) => {
   const {
     responses, loading, platform, language, setResponses,
   } = useContext(ProjectContext);
@@ -51,4 +51,4 @@ export function Modal({ handleGenerate }) {
 
     </div>
   );
-}
+};

@@ -6,7 +6,7 @@ import React, {
 export const ProjectContext = createContext();
 
 // Create a context provider component
-export function ProjectProvider({ children }) {
+export const ProjectProvider = ({ children }) => {
   const [language, setLanguage] = useState("");
   const [platform, setPlatform] = useState("");
   const [field, setField] = useState("");
@@ -52,4 +52,4 @@ export function ProjectProvider({ children }) {
       {children}
     </ProjectContext.Provider>
   );
-}
+};

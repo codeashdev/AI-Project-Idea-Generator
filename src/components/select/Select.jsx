@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 
 import { ProjectContext } from "../../context/projectContext";
 
-export function SelectLanguage() {
+export const SelectLanguage = () => {
   const { language, handleLanguageChange, platform } = useContext(ProjectContext);
 
   return (
@@ -38,9 +38,9 @@ export function SelectLanguage() {
       </select>
     </div>
   );
-}
+};
 
-export function SelectPlatform() {
+export const SelectPlatform = () => {
   const { platform, handlePlatformChange } = useContext(ProjectContext);
 
   return (
@@ -58,4 +58,4 @@ export function SelectPlatform() {
       </select>
     </div>
   );
-}
+};

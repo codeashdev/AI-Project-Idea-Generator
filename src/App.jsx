@@ -9,7 +9,7 @@ import { Modal } from "./components/modal/Modal";
 import { ProjectContext } from "./context/projectContext";
 import { fetchResponse } from "./fetchResponse/fetchRespone";
 
-function App() {
+const App = () => {
   const {
     prompt, setResponses, setLoading, platform,
   } = useContext(ProjectContext);
@@ -35,6 +35,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

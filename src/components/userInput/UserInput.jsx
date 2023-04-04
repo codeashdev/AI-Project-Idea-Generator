@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 
 import { ProjectContext } from "../../context/projectContext";
 
-export function UserInput() {
+export const UserInput = () => {
   const { field, handleFieldChange } = useContext(ProjectContext);
 
   return (
@@ -11,4 +11,4 @@ export function UserInput() {
       <input type="text" value={field} onChange={handleFieldChange} placeholder=" e.g. AI based" className=" input input-bordered w-full max-w-xs m-2 bg-[#0D1117] text-white" />
     </div>
   );
-}
+};

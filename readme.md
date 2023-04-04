@@ -6,6 +6,17 @@ This tool is built using React, Tailwind, and DaisyUI and uses the OpenAI API to
 <img src="./public/screenshot.png" width="830">
 </div>
 
+## Next up:
+
+- [ ] Add API key by the user option
+- [ ] Save API key in the local storage
+
+## Recent Add-ons:
+
+- [x] Copy text button
+- [x] Render Platform first and then languages accordingly
+- [x] Generate response only when platform and language is selected
+
 ## Install dependencies:
 
 ```bash

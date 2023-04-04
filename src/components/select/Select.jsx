@@ -2,10 +2,9 @@ import React, { useContext } from "react";
 
 import { ProjectContext } from "../../context/projectContext";
 
-export const SelectLanguage = () => {
-
+export function SelectLanguage() {
   const { language, handleLanguageChange, platform } = useContext(ProjectContext);
- 
+
   return (
     <div className="flex justify-center m-5">
       <select
@@ -13,50 +12,50 @@ export const SelectLanguage = () => {
         value={language}
         onChange={handleLanguageChange}
       >
-      {platform ==="Website"?(
-        <>
-        <option value="" disabled defaultValue>
-          Pick the language
-        </option>
-        <option value="" disabled>Frameworks||Libraries:</option>
+        {platform === "Website" ? (
+          <>
+            <option value="" disabled defaultValue>
+              Pick the language
+            </option>
+            <option value="" disabled>Frameworks||Libraries:</option>
             <option value="React">React</option>
             <option value="Vue">Vue</option>
             <option value="Svelte">Svelte</option>
-        <option value="" disabled>Languages:</option> 
+            <option value="" disabled>Languages:</option>
             <option value="VanillaJS">VanillaJS</option>
             <option value="Node.js">Node.js</option>
             <option value="Python">Python</option>
-            </>
-            ):(
-              <>
-       <option value="" disabled>Mobile:</option> 
+          </>
+        ) : (
+          <>
+            <option value="" disabled>Mobile:</option>
             <option value="React Native">React Native</option>
             <option value="Flutter">Flutter</option>
             <option value="Swift">Swift</option>
             <option value="Kotlin">Kotlin</option>
-            </> )}
+          </>
+        )}
       </select>
     </div>
   );
-};
+}
 
-export const SelectPlatform = () => {
+export function SelectPlatform() {
+  const { platform, handlePlatformChange } = useContext(ProjectContext);
 
-    const { platform, handlePlatformChange } = useContext(ProjectContext);
-   
-    return (
-      <div className="flex justify-center m-5">
-        <select
-          className=" select bg-[#0D1117] text-white w-full max-w-xs inline "
-          value={platform}
-          onChange={handlePlatformChange}
-        >
-          <option value="" disabled defaultValue>
-            Pick the platform
-          </option>
-          <option value="Website">Web</option>
-          <option value="Mobile App">Mobile</option>
-        </select>
-      </div>
-    );
-  };
+  return (
+    <div className="flex justify-center m-5">
+      <select
+        className=" select bg-[#0D1117] text-white w-full max-w-xs inline "
+        value={platform}
+        onChange={handlePlatformChange}
+      >
+        <option value="" disabled defaultValue>
+          Pick the platform
+        </option>
+        <option value="Website">Web</option>
+        <option value="Mobile App">Mobile</option>
+      </select>
+    </div>
+  );
+}
